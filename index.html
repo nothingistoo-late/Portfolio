@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hoang Chi Trung - Developer | .NET Backend & Fullstack</title>
+    <meta
+      content="Portfolio of Hoang Chi Trung - Developer with 1+ years experience in Backend (.NET) and Fullstack (ReactJS). Specializing in Clean Architecture, CQRS, RESTful APIs, and e-commerce solutions."
+      name="description"
+    />
+    <meta
+      content="Hoang Chi Trung, Developer, .NET Developer, Backend Developer, ASP.NET Core, C#, ReactJS, Fullstack Developer, Clean Architecture, CQRS"
+      name="keywords"
+    />
+
+  <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+  <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- Override Accent Color to Light Blue -->
+    <style>
+      :root {
+        --accent-color: #6ba3d8;
+        --accent-color-alt: #8bc4e8;
+      }
+    </style>
+
+    <!-- Custom Styles for Skills Section -->
+    <style>
+      .skills-category {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        border: 1px solid #e9ecef;
+      }
+
+      .skills-category:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .skills-category h4 {
+        color: #2c3e50;
+        font-weight: 600;
+        font-size: 1.25rem;
+        border-bottom: 2px solid #6ba3d8;
+        padding-bottom: 0.75rem;
+      }
+
+      .skills-category h4 i {
+        color: #6ba3d8;
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+      }
+
+      .skill-tag {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: linear-gradient(135deg, #6ba3d8, #8bc4e8);
+        color: #ffffff;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(107, 163, 216, 0.2);
+      }
+
+      .skill-tag:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 768px) {
+        .skills-category {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      /* Soft Skills Layout - Icon and Text Side by Side */
+      #soft-skills .stats-item {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      #soft-skills .stats-item .header-row {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      #soft-skills .stats-item i {
+        font-size: 2.5rem;
+        color: #6ba3d8;
+        flex-shrink: 0;
+        font-weight: 700;
+        -webkit-text-stroke: 0.5px #6ba3d8;
+      }
+
+      #soft-skills .stats-item .content-wrapper {
+        flex: 1;
+      }
+
+      #soft-skills .stats-item h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        color: #2c3e50;
+      }
+
+       #soft-skills .stats-item p {
+         margin: 0;
+         color: #6c757d;
+         font-size: 0.9rem;
+         line-height: 1.5;
+       }
+
+       /* Portfolio - Hide links on hover, show only shiny metallic effect */
+       .portfolio .portfolio-content {
+         cursor: pointer;
+         position: relative;
+         overflow: hidden;
+       }
+
+       .portfolio .portfolio-content .portfolio-info .preview-link,
+       .portfolio .portfolio-content .portfolio-info .details-link {
+         display: none;
+       }
+
+       .portfolio .portfolio-content .portfolio-info {
+         cursor: pointer;
+         background: linear-gradient(
+           135deg,
+           rgba(107, 163, 216, 0.3) 0%,
+           rgba(139, 196, 232, 0.2) 50%,
+           rgba(107, 163, 216, 0.3) 100%
+         );
+         backdrop-filter: blur(2px);
+       }
+
+       .portfolio .portfolio-content:hover .portfolio-info {
+         background: linear-gradient(
+           135deg,
+           rgba(107, 163, 216, 0.5) 0%,
+           rgba(255, 255, 255, 0.3) 25%,
+           rgba(139, 196, 232, 0.4) 50%,
+           rgba(255, 255, 255, 0.3) 75%,
+           rgba(107, 163, 216, 0.5) 100%
+         );
+         animation: metallic-shine 2s ease-in-out infinite;
+       }
+
+       @keyframes metallic-shine {
+         0% {
+           background-position: -200% center;
+         }
+         100% {
+           background-position: 200% center;
+         }
+       }
+
+       .portfolio .portfolio-content:hover img {
+         transform: scale(1.05);
+         filter: brightness(1.1) contrast(1.1);
+       }
+     </style>
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+        <img
+          src="assets/img/my-profile-img.jpg"
+          alt=""
+          class="img-fluid rounded-circle"
+        />
+    </div>
+
+      <a
+        href="index.html"
+        class="logo d-flex align-items-center justify-content-center"
+      >
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Hoang Chi Trung</h1>
+    </a>
+
+    <div class="social-links text-center">
+        <a
+          href="https://github.com/nothingistoo-late"
+          target="_blank"
+          class="github"
+          ><i class="bi bi-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/hoang-chi-trung"
+          target="_blank"
+          class="linkedin"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/hoangchitrung"
+          target="_blank"
+          class="facebook"
+          ><i class="bi bi-facebook"></i
+        ></a>
+        <a href="mailto:trunghc.working@gmail.com" class="email"
+          ><i class="bi bi-envelope"></i
+        ></a>
+        <a href="tel:0339381305" class="phone"
+          ><i class="bi bi-telephone"></i
+        ></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+          <li>
+            <a href="#hero" class="active"
+              ><i class="bi bi-house navicon"></i>Home</a
+            >
+            </li>
+          <li>
+            <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+        </li>
+          <li>
+            <a href="#resume"
+              ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
+            >
+          </li>
+          <li>
+            <a href="#portfolio"
+              ><i class="bi bi-images navicon"></i> Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#services"
+              ><i class="bi bi-hdd-stack navicon"></i> Services</a
+            >
+          </li>
+          <li>
+            <a href="#contact"
+              ><i class="bi bi-envelope navicon"></i> Contact</a
+            >
+          </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+        <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="" />
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <h2>Hoang Chi Trung</h2>
+          <p>
+            I'm
+            <span
+              class="typed"
+              data-typed-items="Developer, Backend Developer, Fullstack Developer"
+              >Developer</span
+            ><span
+              class="typed-cursor typed-cursor--blink"
+              aria-hidden="true"
+            ></span
+            ><span
+              class="typed-cursor typed-cursor--blink"
+              aria-hidden="true"
+            ></span>
+          </p>
+      </div>
+      </section>
+      <!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+          <p>
+            IT developer with over 1 year of experience in Backend (.NET) and
+            expanding to Fullstack with ReactJS. Focused on building efficient,
+            scalable, and maintainable software through continuous learning.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+              <img
+                src="assets/img/my-profile-img.jpg"
+                class="img-fluid"
+                alt=""
+              />
+          </div>
+          <div class="col-lg-8 content">
+              <h2>Developer</h2>
+              <p class="py-3">
+                IT developer with over 1 year of experience in Backend (.NET)
+                and expanding to Fullstack with ReactJS. Focused on building
+                efficient, scalable, and maintainable software through
+                continuous learning. Skilled in Clean Architecture, CQRS
+                pattern, and modern web technologies including .NET 8, ASP.NET
+                Core, Entity Framework Core, ReactJS, and SQL Server.
+              </p>
+              </div>
+              </div>
+            </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Technical Skills</h2>
+          <p>
+            Technologies and tools I use to build efficient and scalable
+            applications
+            </p>
+          </div>
+        <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="skills-category">
+                <h4 class="mb-3">
+                  <i class="bi bi-code-slash me-2"></i>Language & Framework
+                </h4>
+                <div class="skill-tags">
+                  <span class="skill-tag">C#</span>
+                  <span class="skill-tag">.NET 8</span>
+                  <span class="skill-tag">ASP.NET Core</span>
+                  <span class="skill-tag">Entity Framework Core</span>
+                  <span class="skill-tag">ReactJS</span>
+                  <span class="skill-tag">HTML5</span>
+                  <span class="skill-tag">CSS3</span>
+                  <span class="skill-tag">JavaScript</span>
+            </div>
+            </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="skills-category">
+                <h4 class="mb-3">
+                  <i class="bi bi-gear me-2"></i>API & System
+                </h4>
+                <div class="skill-tags">
+                  <span class="skill-tag">RESTful API</span>
+                  <span class="skill-tag">JWT Authentication</span>
+                  <span class="skill-tag">Clean Architecture</span>
+                  <span class="skill-tag">CQRS Pattern</span>
+                  <span class="skill-tag">3-Layer Architecture</span>
+                  <span class="skill-tag">SQL Server</span>
+            </div>
+              </div>
+        </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="skills-category">
+                <h4 class="mb-3"><i class="bi bi-tools me-2"></i>Dev Tools</h4>
+                <div class="skill-tags">
+                  <span class="skill-tag">Git</span>
+                  <span class="skill-tag">Postman</span>
+                  <span class="skill-tag">Visual Studio</span>
+                  <span class="skill-tag">VS Code</span>
+                  <span class="skill-tag">Docker</span>
+      </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Skills Section -->
+
+      <!-- Services Section -->
+      <section id="services" class="services section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <p>
+            Backend development services including API development, database
+            design, server-side programming, and system architecture.
+          </p>
+              </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-briefcase"></i>
+              </div>
+              <div>
+                <h4 class="title">
+                  <a href="service-details.html" class="stretched-link"
+                    >.NET Backend Development</a
+                  >
+                </h4>
+                <p class="description">
+                  Develop scalable backend systems using .NET 8, ASP.NET Core
+                  with Clean Architecture and CQRS pattern
+                </p>
+              </div>
+          </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-card-checklist"></i>
+              </div>
+              <div>
+                <h4 class="title">
+                  <a href="service-details.html" class="stretched-link"
+                    >RESTful API Development</a
+                  >
+                </h4>
+                <p class="description">
+                  Design and develop RESTful APIs with JWT authentication,
+                  Entity Framework Core, and SQL Server
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-bar-chart"></i>
+              </div>
+              <div>
+                <h4 class="title">
+                  <a href="service-details.html" class="stretched-link"
+                    >Clean Architecture & CQRS</a
+                  >
+                </h4>
+                <p class="description">
+                  Implement Clean Architecture with CQRS pattern for
+                  maintainable and scalable applications
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-binoculars"></i>
+          </div>
+              <div>
+                <h4 class="title">
+                  <a href="service-details.html" class="stretched-link"
+                    >Fullstack Development</a
+                  >
+                </h4>
+                <p class="description">
+                  Build fullstack applications with .NET backend and ReactJS
+                  frontend
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-brightness-high"></i>
+        </div>
+              <div>
+                <h4 class="title">
+                  <a href="service-details.html" class="stretched-link"
+                    >E-commerce Solutions</a
+                  >
+                </h4>
+                <p class="description">
+                  Develop e-commerce platforms with payment integration and
+                  AI-powered features
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-calendar4-week"></i>
+      </div>
+              <div>
+                <h4 class="title">
+                  <a href="service-details.html" class="stretched-link"
+                    >Deployment & DevOps</a
+                  >
+                </h4>
+                <p class="description">
+                  Deploy applications using Docker, Render, and manage CI/CD
+                  pipelines
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+          <p>
+            Developer with expertise in .NET ecosystem, Clean Architecture, CQRS
+            pattern, and modern web development. Experienced in building
+            scalable backend systems and expanding to fullstack development.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Projects</h3>
+              <div class="resume-item">
+                <h4>Backend Developer - Chemistry Subject Project</h4>
+                <h5>09/2025 - 11/2025</h5>
+                <p><em>Team size: 6</em></p>
+                <ul>
+                  <li>
+                    Developed backend system for Chemistry learning platform
+                    with Clean Architecture and CQRS pattern
+                  </li>
+                  <li>
+                    Implemented CQRS to separate read/write flows, improving
+                    code clarity and reducing coupling
+                  </li>
+                  <li>
+                    Developed automatic migration and initial data seeding
+                    (roles, admin) for streamlined deployment
+                  </li>
+                  <li>
+                    Structured solution following Clean Architecture with clear
+                    separation between layers
+                  </li>
+              </ul>
+              </div>
+              <!-- End Resume Item -->
+
+            <div class="resume-item">
+                <h4>Backend Developer - Vegie E-commerce Platform</h4>
+                <h5>08/2025 - 11/2025</h5>
+                <p><em>Team size: 6</em></p>
+                <ul>
+                  <li>
+                    Developed 60+ RESTful APIs for vegetable & fruit e-commerce
+                    system
+                  </li>
+                  <li>
+                    Deployed fullstack on Render with real domain, integrated
+                    Payos for real payments
+                  </li>
+                  <li>
+                    Developed AI Menu Suggestion feature, boosting user
+                    engagement by ~30%
+                  </li>
+                  <li>Collaborated on ReactJS frontend development</li>
+                </ul>
+              </div>
+              <!-- End Resume Item -->
+
+            <div class="resume-item">
+                <h4>School Health Management System (Backend Developer)</h4>
+                <h5>03/2025 – 07/2025</h5>
+                <p>
+                  <em
+                    >A backend system for managing comprehensive student health
+                    data, including vaccination records, periodic checkups,
+                    medication distribution, and psychological counseling.</em
+                  >
+                </p>
+                <p><strong>Tech Stack:</strong></p>
+                <p>
+                  .NET 8, SQL Server, Entity Framework Core, AutoMapper,
+                  Repository Pattern, Unit of Work
+                </p>
+                <p><strong>Achievements & Contributions:</strong></p>
+                <ul>
+                  <li>
+                    Designed a relational database with 30+ tables (Vaccination,
+                    Checkup, Counseling, Medication, etc.) with fully defined
+                    foreign key relationships
+                  </li>
+                  <li>
+                    Developed 50+ API endpoints across multiple management and
+                    reporting modules, ensuring 100% data integrity throughout
+                    the system
+                  </li>
+                  <li>
+                    Applied Repository Pattern + Unit of Work, reducing
+                    duplicated service-layer logic by 35% and improving
+                    maintainability
+                  </li>
+                </ul>
+                <p>
+                  <strong>GitHub:</strong>
+                  <a
+                    href="https://github.com/TrungTin227/SWP391_SU25_SchoolHealthManager"
+                    target="_blank"
+                    >https://github.com/TrungTin227/SWP391_SU25_SchoolHealthManager</a
+                  >
+                </p>
+              </div>
+              <!-- End Resume Item -->
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="resume-title" style="visibility: hidden">Projects</h3>
+            <div class="resume-item">
+                <h4>
+                  AI Project Collection – Fullstack & AI-Assisted UI Development
+                </h4>
+                <h5>06/2024 – 10/2024</h5>
+                <p><em>Team size: Solo</em></p>
+                <ul>
+                  <li>
+                    Built a collection of fullstack and web applications using
+                    .NET 8, React, SQL Server, and TypeScript
+                  </li>
+                  <li>
+                    Utilized AI tools to design UI layouts, refine component
+                    structures, and accelerate front-end development workflows
+                  </li>
+                  <li>
+                    Implemented RESTful APIs, authentication (JWT), database
+                    modeling, and clean separation of concerns across all
+                    projects
+                  </li>
+                  <li>
+                    Applied modern frontend practices including React Router,
+                    TailwindCSS, and responsive UI optimization
+                  </li>
+              </ul>
+                <p><strong>Achievements:</strong></p>
+                <ul>
+                  <li>
+                    Improved development speed and UI quality by integrating AI
+                    into daily workflow
+                  </li>
+                  <li>
+                    Standardized project structure for faster maintenance and
+                    scalability across the entire collection
+                  </li>
+                </ul>
+                <p>
+                  <strong>GitHub:</strong>
+                  <a
+                    href="https://github.com/nothingistoo-late/AI_Project"
+                    target="_blank"
+                    >https://github.com/nothingistoo-late/AI_Project</a
+                  >
+                </p>
+              </div>
+              <!-- End Resume Item -->
+
+            <div class="resume-item">
+                <h4>Auto Commit App – Git Automation Tool</h4>
+                <h5>02/2024 – 03/2024</h5>
+                <p><em>Team size: Solo</em></p>
+                <ul>
+                  <li>
+                    Developed an automated commit & push system using Git and
+                    Windows Task Scheduler to maintain consistent contribution
+                    history
+                  </li>
+                  <li>
+                    Implemented scripts to automatically stage changes, generate
+                    time-based commit messages, and push updates on schedule
+                  </li>
+                  <li>
+                    Ensured offline-safe commits by storing changes locally and
+                    syncing when internet becomes available
+                  </li>
+                </ul>
+                <p><strong>Achievements:</strong></p>
+                <ul>
+                  <li>
+                    Increased workflow efficiency by automating repetitive Git
+                    actions
+                  </li>
+                  <li>
+                    Maintained daily contribution streak with zero manual
+                    intervention
+                  </li>
+                  <li>
+                    Built a lightweight productivity tool adopted across
+                    multiple local projects
+                  </li>
+                </ul>
+                <p>
+                  <strong>GitHub:</strong>
+                  <a
+                    href="https://github.com/nothingistoo-late/AutoCommit"
+                    target="_blank"
+                    >https://github.com/nothingistoo-late/AutoCommit</a
+                  >
+                </p>
+              </div>
+              <!-- End Resume Item -->
+        </div>
+      </div>
+
+          <div class="row mt-4">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Bachelor of Information Technology</h4>
+                <h5>2022 - Present</h5>
+                <p><em>FPT University, Vietnam</em></p>
+                <p>
+                  GPA: 3.1. Currently studying Information Technology with focus
+                  on software development, backend systems, and fullstack
+                  development.
+                </p>
+                </div>
+              <!-- End Resume Item -->
+              </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+              <h3 class="resume-title">Certificates</h3>
+              <div class="resume-item">
+                <h4>Software Development Lifecycle</h4>
+                <h5>2024 - 2025</h5>
+                </div>
+              <!-- End Resume Item -->
+              <div class="resume-item">
+                <h4>Agile Software Development</h4>
+                <h5>2024 - 2025</h5>
+              </div>
+              <!-- End Resume Item -->
+                </div>
+              </div>
+        </div>
+      </section>
+      <!-- /Resume Section -->
+
+      <!-- Soft Skills Section -->
+      <section id="soft-skills" class="stats section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Soft Skills</h2>
+          <p>
+            Personal attributes and abilities that enhance my professional
+            performance
+          </p>
+                </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="stats-item">
+                <div class="header-row">
+                  <i class="bi bi-lightbulb"></i>
+                  <h3>Logical Thinking</h3>
+                </div>
+                <p>Analytical approach to problem-solving and system design</p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="stats-item">
+                <div class="header-row">
+                  <i class="bi bi-book"></i>
+                  <h3>Eager to Learn</h3>
+                </div>
+                <p>Continuously learning new technologies and best practices</p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="stats-item">
+                <div class="header-row">
+                  <i class="bi bi-people"></i>
+                  <h3>Teamwork</h3>
+                </div>
+                <p>
+                  Collaborative spirit and effective communication in team
+                  projects
+                </p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="stats-item">
+                <div class="header-row">
+                  <i class="bi bi-puzzle"></i>
+                  <h3>Problem Solving</h3>
+                </div>
+                <p>Creative solutions to complex technical challenges</p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="stats-item">
+                <div class="header-row">
+                  <i class="bi bi-robot"></i>
+                  <h3>AI-Powered Productivity</h3>
+                </div>
+                <p>
+                  Leveraging AI tools to accelerate development workflow and
+                  enhance productivity
+                </p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="stats-item">
+                <div class="header-row">
+                  <i class="bi bi-chat-dots"></i>
+                  <h3>Communication</h3>
+                </div>
+                <p>
+                  Clear and effective communication with team members and
+                  stakeholders
+                </p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="stats-item">
+                <div class="header-row">
+                  <i class="bi bi-clock"></i>
+                  <h3>Time Management</h3>
+                </div>
+                <p>
+                  Efficiently managing tasks and deadlines to deliver quality
+                  work on time
+                </p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="stats-item">
+                <div class="header-row">
+                  <i class="bi bi-arrow-repeat"></i>
+                  <h3>Adaptability</h3>
+                </div>
+                <p>
+                  Quickly adapting to new technologies, methodologies, and
+                  project requirements
+                </p>
+              </div>
+        </div>
+            <!-- End Stats Item -->
+      </div>
+        </div>
+      </section>
+      <!-- /Soft Skills Section -->
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+          <h2>Portfolio</h2>
+          <p>
+            Showcasing backend development projects including API development,
+            database design, and collaborative software projects.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+      <div class="container">
+          <div
+            class="isotope-layout"
+            data-default-filter="*"
+            data-layout="masonry"
+            data-sort="original-order"
+          >
+            <ul
+              class="portfolio-filters isotope-filters"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-backend">Backend</li>
+              <li data-filter=".filter-fullstack">Fullstack</li>
+              <li data-filter=".filter-tool">Tool</li>
+            </ul>
+            <!-- End Portfolio Filters -->
+
+            <div
+              class="row gy-4 isotope-container"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-backend"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/product-1.jpg"
+                    class="img-fluid"
+                    alt="Chemistry Subject Project"
+                  />
+                  <div class="portfolio-info">
+                    <h4>Chemistry Subject Project</h4>
+                    <p>Chemistry Learning Platform with Clean Architecture & CQRS</p>
+                    <a
+                      href="assets/img/portfolio/product-1.jpg"
+                      title="Chemistry Subject Project"
+                      data-gallery="portfolio-gallery-backend"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://github.com/light0504/PRN232-GroupProject"
+                      target="_blank"
+                      title="View on GitHub"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+            </div>
+          </div>
+            </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-fullstack"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/app-1.jpg"
+                    class="img-fluid"
+                    alt="Vegie E-commerce Platform"
+                  />
+                  <div class="portfolio-info">
+                    <h4>Vegie E-commerce Platform</h4>
+                    <p>Fullstack E-commerce with AI Menu Suggestion & Payment Integration</p>
+                    <a
+                      href="assets/img/portfolio/app-1.jpg"
+                      title="Vegie E-commerce Platform"
+                      data-gallery="portfolio-gallery-fullstack"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://vegie.site/"
+                      target="_blank"
+                      title="Visit Website"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+            </div>
+            </div>
+            </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-backend"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/product-2.jpg"
+                    class="img-fluid"
+                    alt="School Health Management System"
+                  />
+                  <div class="portfolio-info">
+                    <h4>School Health Management System</h4>
+                    <p>Backend system for managing student health data with 30+ tables</p>
+                    <a
+                      href="assets/img/portfolio/product-2.jpg"
+                      title="School Health Management System"
+                      data-gallery="portfolio-gallery-backend"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://github.com/TrungTin227/SWP391_SU25_SchoolHealthManager"
+                      target="_blank"
+                      title="View on GitHub"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+            </div>
+        </div>
+      </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-fullstack"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/branding-1.jpg"
+                    class="img-fluid"
+                    alt="AI Project Collection"
+                  />
+                  <div class="portfolio-info">
+                    <h4>AI Project Collection</h4>
+                    <p>Fullstack & AI-Assisted UI Development - 7 Applications</p>
+                    <a
+                      href="assets/img/portfolio/branding-1.jpg"
+                      title="AI Project Collection"
+                      data-gallery="portfolio-gallery-fullstack"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://github.com/nothingistoo-late/AI_Project"
+                      target="_blank"
+                      title="View on GitHub"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+              </div>
+              </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tool"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/app-2.jpg"
+                    class="img-fluid"
+                    alt="Auto Commit App"
+                  />
+                  <div class="portfolio-info">
+                    <h4>Auto Commit App</h4>
+                    <p>Git Automation Tool for Automated Commit & Push System</p>
+                    <a
+                      href="assets/img/portfolio/app-2.jpg"
+                      title="Auto Commit App"
+                      data-gallery="portfolio-gallery-tool"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://github.com/nothingistoo-late/AutoCommit"
+                      target="_blank"
+                      title="View on GitHub"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+              </div>
+              </div>
+          </div>
+              <!-- End Portfolio Item -->
+        </div>
+            <!-- End Portfolio Container -->
+      </div>
+        </div>
+      </section>
+      <!-- /Portfolio Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+          <p>
+            Feel free to reach out for collaboration opportunities or inquiries
+            about my work
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-5">
+            <div class="info-wrap">
+                <div
+                  class="info-item d-flex"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                    <h3>Location</h3>
+                    <p>Tang Nhon Phu A Ward, HCMC, Vietnam</p>
+                </div>
+                </div>
+                <!-- End Info Item -->
+
+                <div
+                  class="info-item d-flex"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                    <p>0339381305</p>
+                </div>
+                </div>
+                <!-- End Info Item -->
+
+                <div
+                  class="info-item d-flex"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                    <p>trunghc.working@gmail.com</p>
+                </div>
+                </div>
+                <!-- End Info Item -->
+
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5530059556595!2d106.7916028747933!3d10.845479057916727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527157c90def5%3A0x8cfc6a3a0cf54e6d!2zxJAuIEzDqiBWxINuIFZp4buHdCwgVGjhu6cgxJDhu6ljLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1765465567696!5m2!1sen!2s"
+                  frameborder="0"
+                  style="border: 0; width: 100%; height: 270px"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+              <form
+                action="forms/contact.php"
+                method="post"
+                class="php-email-form"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name-field"
+                      class="form-control"
+                      required=""
+                    />
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email-field"
+                      required=""
+                    />
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="subject"
+                      id="subject-field"
+                      required=""
+                    />
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      rows="10"
+                      id="message-field"
+                      required=""
+                    ></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                    <div class="sent-message">
+                      Your message has been sent. Thank you!
+                    </div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+        </div>
+            <!-- End Contact Form -->
+      </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Hoang Chi Trung</h3>
+              <p class="mb-3">
+                Developer specializing in Backend (.NET) and Fullstack
+                development
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a
+                  href="https://github.com/nothingistoo-late"
+                  target="_blank"
+                  class="github"
+                  ><i class="bi bi-github"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/hoang-chi-trung"
+                  target="_blank"
+                  class="linkedin"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/hoangchitrung"
+                  target="_blank"
+                  class="facebook"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="mailto:trunghc.working@gmail.com" class="email"
+                  ><i class="bi bi-envelope"></i
+                ></a>
+      </div>
+      </div>
+    </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-contact">
+              <h4>Contact Info</h4>
+              <p>
+                <i class="bi bi-geo-alt"></i> Tang Nhon Phu A Ward, HCMC,
+                Vietnam<br />
+                <i class="bi bi-telephone"></i>
+                <a href="tel:0339381305">0339381305</a><br />
+                <i class="bi bi-envelope"></i>
+                <a href="mailto:trunghc.working@gmail.com"
+                  >trunghc.working@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright text-center mt-4">
+          <p>
+            &copy; <span id="current-year"></span>
+            <strong>Hoang Chi Trung</strong>. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+  </footer>
+
+  <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+     <script>
+       // Set current year in footer
+       document.getElementById("current-year").textContent =
+         new Date().getFullYear();
+
+       // Portfolio click handler - open link on click instead of hover
+       document.addEventListener("DOMContentLoaded", function () {
+         const portfolioItems = document.querySelectorAll(
+           ".portfolio .portfolio-content"
+         );
+         portfolioItems.forEach((item) => {
+           item.addEventListener("click", function (e) {
+             // Find the details link (project link)
+             const detailsLink = this.querySelector(".details-link");
+             if (detailsLink && !e.target.closest(".preview-link")) {
+               // Only open if not clicking on preview link (zoom icon)
+               const href = detailsLink.getAttribute("href");
+               if (href && href !== "#" && !href.includes("portfolio-details.html")) {
+                 window.open(href, detailsLink.getAttribute("target") || "_self");
+               }
+             }
+           });
+         });
+       });
+     </script>
+   </body>
+ </html>
